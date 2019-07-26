@@ -1,4 +1,5 @@
-// Copyright (C) 2018,2020 The LineageOS Project
+//
+//  Copyright (C) 2020 The Android Open Source Project
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,18 +14,18 @@
 // limitations under the License.
 
 cc_binary {
+    name: "android.hardware.lights-service.example",
     relative_install_path: "hw",
-    defaults: ["hidl_defaults"],
-    name: "android.hardware.light@2.0-service.onclite",
-    proprietary: true,
-    init_rc: ["android.hardware.light@2.0-service.onclite.rc"],
-    vintf_fragments: ["android.hardware.light@2.0-service.onclite.xml"],
-    srcs: ["service.cpp", "Light.cpp"],
+    init_rc: ["lights-default.rc"],
+    vintf_fragments: ["lights-default.xml"],
+    vendor: true,
     shared_libs: [
-        "libhardware",
-        "libhidlbase",
-        "liblog",
-        "libutils",
-        "android.hardware.light@2.0",
+        "libbase",
+        "libbinder_ndk",
+        "android.hardware.light-ndk_platform",
+    ],
+    srcs: [
+        "Lights.cpp",
+        "main.cpp",
     ],
 }
