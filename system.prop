@@ -155,6 +155,10 @@ vendor.bluetooth.soc=pronto
 # System property for cabl
 ro.qualcomm.cabl=0
 
+ro.vendor.display.svi=1
+vendor.display.svi.config=1
+vendor.display.svi.config_path=/vendor/etc/SVIConfig.xml
+
 #
 # System props for telephony
 # System prop to turn on CdmaLTEPhone always
