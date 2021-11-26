@@ -1,5 +1,6 @@
 //
 //  Copyright (C) 2020 The Android Open Source Project
+//  Copyright (C) 2024 Hadad <hadad@linuxmail.org>
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,10 +15,10 @@
 // limitations under the License.
 
 cc_binary {
-    name: "android.hardware.lights-service.example",
+    name: "android.hardware.lights-service.onc",
     relative_install_path: "hw",
-    init_rc: ["lights-default.rc"],
-    vintf_fragments: ["lights-default.xml"],
+    init_rc: ["android.hardware.lights-service.onc.rc"],
+    vintf_fragments: ["android.hardware.lights-service.onc.xml"],
     vendor: true,
     shared_libs: [
         "libbase",

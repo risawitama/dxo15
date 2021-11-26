@@ -375,7 +375,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.onclite
+    android.hardware.lights-service.onc
 
 # LiveDisplay
 PRODUCT_PACKAGES += \

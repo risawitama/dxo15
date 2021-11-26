@@ -46,12 +46,10 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <instance>default</instance>
     </interface>
 </hal>
-<hal format="hidl" optional="false">
+<hal format="aidl" optional="false">
     <name>android.hardware.light</name>
-    <transport>hwbinder</transport>
-    <version>2.0</version>
     <interface>
-        <name>ILight</name>
+        <name>ILights</name>
         <instance>default</instance>
     </interface>
 </hal>
