@@ -73,6 +73,12 @@
         <item>com.google.android.GoogleCameraEng</item>
     </string-array>
 
+    <!-- The list of package IDs that are not allowed to use aux cameras. -->
+    <string-array name="config_cameraAuxPackageExcludeList" translatable="false">
+        <item>org.telegram.messenger</item>
+        <item>org.thunderdog.challegram</item>
+    </string-array>
+
     <!-- Whether to cancel fingerprint operation if not idle -->
     <bool name="config_fpCancelIfNotIdle">true</bool>
 </resources>
