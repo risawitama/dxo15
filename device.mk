@@ -473,6 +473,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     liblzma.vendor \
     fstab.qcom \
+    fstab.zram \
     fstab.qcom_ramdisk \
     fstab.qcom_ramdisk2 \
     init.qcom.usb.sh \
