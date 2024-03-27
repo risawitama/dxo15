@@ -1117,7 +1117,7 @@ vendor/lib64/libqmiservices.so|2e259463cbeb329caec303b642ab4068c8d10be5
 vendor/lib64/libqrtr.so|2e4d6aa5344159c36ccd34cc341ee29d6f0424a1
 vendor/lib64/libqsocket.so|0817c4699f08d2595971f8103776a369bd15580d
 vendor/lib64/librcc.so|e35056f3b5c0790d65ded14ed48dd1ed1296ecc7
-vendor/lib64/libril-qc-hal-qmi.so|fd8dca1657ed3018c83f6ffbd1997aa4310a0aa4
+vendor/lib64/libril-qc-hal-qmi.so|fa53b9d1e088bbf0eaf3be2ee7489150c3354e03
 vendor/lib64/libril-qc-logger.so|7f80da37d120faffd72838b76d74102c7321e3a3
 vendor/lib64/libril-qc-ltedirectdisc.so|75e95bf6521f7840890caa1ddb003c6391ae2c6f
 vendor/lib64/libril-qc-qmi-1.so|2d5ac8c1ee721081d2ae78b431aa9eb3b6297638
