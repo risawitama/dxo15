@@ -968,7 +968,7 @@ system_ext/lib64/vendor.qti.latency@2.1.so|6f1aabb40bc6f90ec39a1f55c29a6ba63a326
 system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk|10828ba0d987fa884ad0b4a87a46bf9f505535ea
 system_ext/priv-app/ims/ims.apk|298c0db66e70060cca2a380d19e5fe07f059ad23
 system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|9628504bb7540ebedad3c1f618647421c8288b7e
-vendor/app/CneApp/CneApp.apk|551d0e3251eeda3af8dfa8bb55cd83b858365db8
+vendor/app/CneApp/CneApp.apk;REQUIRED=CneApp.libvndfwk_detect_jni.qti_symlink|551d0e3251eeda3af8dfa8bb55cd83b858365db8
 vendor/app/IWlanService/IWlanService.apk|a8bdac9638bc711e23269d2eead3f46a7b3b6a25
 vendor/bin/ATFWD-daemon|8d2b9db2e2f3cfa59f7aede4ab912d20066f77ea
 vendor/bin/adpl|c6e56a34827222135596c7266343187e055bda06
