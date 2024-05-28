@@ -27,6 +27,7 @@ $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
 BOARD_VENDOR := xiaomi
 PRODUCT_SOONG_NAMESPACES += hardware/xiaomi
+PRODUCT_SOONG_NAMESPACES += bootable/deprecated-ota
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
