@@ -451,7 +451,7 @@ service iop /system/vendor/bin/iop
     group root
     disabled
     socket iop seqpacket 0666 root system
-    task_profiles ServiceCapacityLow
+    task_profiles ProcessCapacityHigh HighPerformance
 
 on property:persist.vendor.sys.rawdump_copy=1
     write /sys/kernel/dload/emmc_dload 1
@@ -541,7 +541,7 @@ service atfwd /vendor/bin/ATFWD-daemon
     class late_start
     user system
     group system radio
-    task_profiles ServiceCapacityLow
+    task_profiles ProcessCapacityHigh HighPerformance
 
 service vendor.sensors.qti /vendor/bin/sensors.qti
     class core
@@ -550,7 +550,7 @@ service vendor.sensors.qti /vendor/bin/sensors.qti
     # Grants the ability for this daemon to bind IPC router ports so it can
     # register QMI services
     capabilities NET_BIND_SERVICE
-    task_profiles ServiceCapacityLow
+    task_profiles ProcessCapacityHigh HighPerformance
 
 service vendor-sensor-sh /vendor/bin/init.qcom.sensors.sh
     class core
@@ -568,7 +568,7 @@ service loc_launcher /system/vendor/bin/loc_launcher
     class late_start
     user gps
     group gps
-    task_profiles ServiceCapacityLow
+    task_profiles ProcessCapacityHigh HighPerformance
 
 service qcom-sh /vendor/bin/init.qcom.sh
     class late_start
