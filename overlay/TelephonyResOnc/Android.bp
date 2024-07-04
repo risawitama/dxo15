@@ -6,6 +6,6 @@
 //
 
 runtime_resource_overlay {
-    name: "SystemUIOverlayOnc",
+    name: "TelephonyResOnc",
     product_specific: true,
 }

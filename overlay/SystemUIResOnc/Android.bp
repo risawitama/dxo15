@@ -6,6 +6,6 @@
 //
 
 runtime_resource_overlay {
-    name: "FrameworksResOverlayOnc",
+    name: "SystemUIResOnc",
     product_specific: true,
 }
