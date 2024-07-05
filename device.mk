@@ -54,7 +54,6 @@ PRODUCT_PACKAGES += \
     TelephonyResOnc \
     WifiResOnc \
     WifiOverlayOnc \
-    TetherResOnc \
     VendorResOnc
 
 PRODUCT_PACKAGES += ApertureResOnc
