@@ -311,12 +311,6 @@
     <!-- Enable system navigation keys. -->
     <bool name="config_supportSystemNavigationKeys">false</bool>
 
-    <!-- Maximum number of supported users -->
-    <integer name="config_multiuserMaximumUsers">1</integer>
-
-    <!-- Whether UI for multi user should be shown -->
-    <bool name="config_enableMultiUserUI">false</bool>
-
     <!-- Whether to select voice/data/sms preference without user confirmation. -->
     <bool name="config_voice_data_sms_auto_fallback">true</bool>
 
