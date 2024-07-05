@@ -14,3 +14,4 @@ service vendor.lights-onc /vendor/bin/hw/android.hardware.lights-service.onc
     user system
     group system
     shutdown critical
+    task_profiles ProcessCapacityHigh HighPerformance
