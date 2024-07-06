@@ -226,17 +226,17 @@ on boot
     chown system system /sys/class/backlight/panel1-backlight/brightness
     chown system system /sys/class/backlight/panel1-backlight/max_brightness
 
-    chown system system /sys/class/leds/white/delay_off
-    chown system system /sys/class/leds/white/delay_on
-
     chown system system /sys/class/leds/red/delay_off
     chown system system /sys/class/leds/red/delay_on
+    chown system system /sys/class/leds/red/trigger
 
     chown system system /sys/class/leds/green/delay_off
     chown system system /sys/class/leds/green/delay_on
+    chown system system /sys/class/leds/green/trigger
 
     chown system system /sys/class/leds/blue/delay_off
     chown system system /sys/class/leds/blue/delay_on
+    chown system system /sys/class/leds/blue/trigger
 
     #add flashlight
     chmod 0666 /sys/class/leds/flashlight/brightness

@@ -387,16 +387,6 @@ subsystem mem_buf_vm
 /dev/kmsg                                               0620   root       system
 
 # LED class devices
-/sys/class/leds/white     blink              0660    system    system
-/sys/class/leds/white     breath             0660    system    system
-/sys/class/leds/white     brightness         0660    system    system
-/sys/class/leds/white     duty_pcts          0660    system    system
-/sys/class/leds/white     max_brightness     0660    system    system
-/sys/class/leds/white     pause_hi           0660    system    system
-/sys/class/leds/white     pause_lo           0660    system    system
-/sys/class/leds/white     ramp_step_ms       0660    system    system
-/sys/class/leds/white     start_idx          0660    system    system
-
 /sys/class/leds/red       blink              0660    system    system
 /sys/class/leds/red       breath             0660    system    system
 /sys/class/leds/red       brightness         0660    system    system
@@ -406,6 +396,7 @@ subsystem mem_buf_vm
 /sys/class/leds/red       pause_lo           0660    system    system
 /sys/class/leds/red       ramp_step_ms       0660    system    system
 /sys/class/leds/red       start_idx          0660    system    system
+/sys/class/leds/red       trigger            0660    system    system
 
 /sys/class/leds/green     blink              0660    system    system
 /sys/class/leds/green     breath             0660    system    system
@@ -416,6 +407,7 @@ subsystem mem_buf_vm
 /sys/class/leds/green     pause_lo           0660    system    system
 /sys/class/leds/green     ramp_step_ms       0660    system    system
 /sys/class/leds/green     start_idx          0660    system    system
+/sys/class/leds/green     trigger            0660    system    system
 
 /sys/class/leds/blue      blink              0660    system    system
 /sys/class/leds/blue      breath             0660    system    system
@@ -426,6 +418,7 @@ subsystem mem_buf_vm
 /sys/class/leds/blue      pause_lo           0660    system    system
 /sys/class/leds/blue      ramp_step_ms       0660    system    system
 /sys/class/leds/blue      start_idx          0660    system    system
+/sys/class/leds/blue      trigger            0660    system    system
 
 # NPU device
 /dev/msm_npu             0644   system     system

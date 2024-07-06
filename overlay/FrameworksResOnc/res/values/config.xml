@@ -340,6 +340,7 @@
     <!-- default refresh rate in the high zone defined by birghtness and ambient thresholds -->
     <integer name="config_fixedRefreshRateInHighZone">60</integer>
 
+    <!-- Default color for notification LED is white. -->
     <color name="config_defaultNotificationColor">#ffffffff</color>
 
     <!-- Default LED on time for notification LED in milliseconds. -->
