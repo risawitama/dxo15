@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2020 The Android Open Source Project
+ * Copyright (C) 2024 Hadad <hadad@linuxmail org>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,13 +24,17 @@
 using ::aidl::android::hardware::light::Lights;
 
 int main() {
+    android::base::InitLogging(nullptr);
     ABinderProcess_setThreadPoolMaxThreadCount(0);
     std::shared_ptr<Lights> lights = ndk::SharedRefBase::make<Lights>();
 
     const std::string instance = std::string() + Lights::descriptor + "/default";
     binder_status_t status = AServiceManager_addService(lights->asBinder().get(), instance.c_str());
-    CHECK(status == STATUS_OK);
+    if (status != STATUS_OK) {
+        LOG(ERROR) << "Failed to add service: " << status;
+        return EXIT_FAILURE;
+    }
 
     ABinderProcess_joinThreadPool();
-    return EXIT_FAILURE;  // should not reached
+    return EXIT_FAILURE;  // should not reach here
 }

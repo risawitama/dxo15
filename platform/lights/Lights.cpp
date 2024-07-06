@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2019 The Android Open Source Project
+ * Copyright (C) 2024 Hadad <hadad@linuxmail org>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,9 +15,14 @@
  * limitations under the License.
  */
 
+#define LOG_TAG "android.hardware.lights-service.onc"
+
 #include "Lights.h"
 
 #include <fstream>
+
+#include <android-base/logging.h>
+#include <android-base/file.h>
 
 namespace aidl {
 namespace android {
@@ -41,11 +47,7 @@ const static std::vector<HwLight> kAvailableLights = {
 };
 
 void Lights::write(const std::string &path, uint32_t value) {
-    std::ofstream file(path);
-
-    if (file.is_open()) {
-        file << std::to_string(value);
-    }
+    android::base::WriteStringToFile(std::to_string(value), path);
 }
 
 uint32_t Lights::RgbaToBrightness(uint32_t color) {

@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2020 The Android Open Source Project
+ * Copyright (C) 2024 Hadad <hadad@linuxmail org>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,6 +18,7 @@
 #pragma once
 
 #include <aidl/android/hardware/light/BnLights.h>
+#include <vector>
 
 namespace aidl {
 namespace android {
