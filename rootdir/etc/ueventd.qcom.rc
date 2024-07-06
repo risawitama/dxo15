@@ -387,6 +387,16 @@ subsystem mem_buf_vm
 /dev/kmsg                                               0620   root       system
 
 # LED class devices
+/sys/class/leds/white     blink              0660    system    system
+/sys/class/leds/white     breath             0660    system    system
+/sys/class/leds/white     brightness         0660    system    system
+/sys/class/leds/white     duty_pcts          0660    system    system
+/sys/class/leds/white     max_brightness     0660    system    system
+/sys/class/leds/white     pause_hi           0660    system    system
+/sys/class/leds/white     pause_lo           0660    system    system
+/sys/class/leds/white     ramp_step_ms       0660    system    system
+/sys/class/leds/white     start_idx          0660    system    system
+
 /sys/class/leds/red       blink              0660    system    system
 /sys/class/leds/red       breath             0660    system    system
 /sys/class/leds/red       brightness         0660    system    system
