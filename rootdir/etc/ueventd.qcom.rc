@@ -387,18 +387,18 @@ subsystem mem_buf_vm
 /dev/kmsg                                               0620   root       system
 
 # LED class devices
-/sys/class/leds/red      delay_on     0640    system    system
-/sys/class/leds/red      delay_off    0640    system    system
-/sys/class/leds/red      breath       0640    system    system
-/sys/class/leds/red      trigger      0640    system    system
-/sys/class/leds/green    delay_on     0640    system    system
-/sys/class/leds/green    delay_off    0640    system    system
-/sys/class/leds/green    breath       0640    system    system
-/sys/class/leds/green    trigger      0640    system    system
-/sys/class/leds/blue     delay_on     0640    system    system
-/sys/class/leds/blue     delay_off    0640    system    system
-/sys/class/leds/blue     breath       0640    system    system
-/sys/class/leds/blue     trigger      0640    system    system
+/sys/class/leds/red      delay_on     0660    system    system
+/sys/class/leds/red      delay_off    0660    system    system
+/sys/class/leds/red      breath       0660    system    system
+/sys/class/leds/red      trigger      0660    system    system
+/sys/class/leds/green    delay_on     0660    system    system
+/sys/class/leds/green    delay_off    0660    system    system
+/sys/class/leds/green    breath       0660    system    system
+/sys/class/leds/green    trigger      0660    system    system
+/sys/class/leds/blue     delay_on     0660    system    system
+/sys/class/leds/blue     delay_off    0660    system    system
+/sys/class/leds/blue     breath       0660    system    system
+/sys/class/leds/blue     trigger      0660    system    system
 
 # NPU device
 /dev/msm_npu             0644   system     system
