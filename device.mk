@@ -31,7 +31,7 @@ PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := true
 
 PRODUCT_PACKAGES += BatteryResOnc
 
-PRODUCT_PACKAGES += CertifiedResOnc
+PRODUCT_PACKAGES += devcerts
 
 $(call inherit-product, vendor/xiaomi/onclite/onclite-vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
