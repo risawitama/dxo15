@@ -420,6 +420,17 @@ subsystem mem_buf_vm
 /sys/class/leds/blue      start_idx          0660    system    system
 /sys/class/leds/blue      trigger            0660    system    system
 
+/sys/class/backlight/backlight           brightness          0660    system    system
+/sys/class/backlight/backlight           max_brightness      0660    system    system
+
+/sys/class/leds/lcd-backlight            brightness          0660    system    system
+/sys/class/leds/lcd-backlight            max_brightness      0660    system    system
+
+/sys/class/backlight/panel0-backlight    brightness          0660    system    system
+/sys/class/backlight/panel0-backlight    max_brightness      0660    system    system
+/sys/class/backlight/panel1-backlight    brightness          0660    system    system
+/sys/class/backlight/panel1-backlight    max_brightness      0660    system    system
+
 # NPU device
 /dev/msm_npu             0644   system     system
 
