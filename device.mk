@@ -50,7 +50,7 @@ PRODUCT_PACKAGES += \
     FrameworksResOnc \
     SystemUIResOnc \
     CarrierConfigResOnc \
-    SettingsOverlayOnc \
+    SettingsResOnc \
     TelephonyResOnc \
     WifiResOnc \
     WifiOverlayOnc \
