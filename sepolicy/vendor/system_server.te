@@ -14,9 +14,14 @@ allow system_server vendor_alarm_boot_prop:file { open read write setattr getatt
 allow system_server proc:file { open read write setattr getattr map ioctl relabelfrom };
 
 # Health HAL
-r_dir_file(system_server, sysfs_battery_supply)
-allow system_server sysfs_battery_supply:dir { search };
-allow system_server sysfs_battery_supply:file { open read write setattr getattr map ioctl relabelfrom };
+allow system_server sysfs_battery_supply:dir { create search getattr open read setattr ioctl write add_name remove_name rmdir relabelfrom };
+allow system_server sysfs_battery_supply:file { create open read write setattr getattr map ioctl relabelfrom };
+allow system_server sysfs_battery_supply:lnk_file { create read setattr getattr relabelfrom relabelto unlink };
 
 # Log
 allow system_server kernel:system syslog_read;
+
+# LEDS
+allow system_server sysfs_leds:dir { create search getattr open read setattr ioctl write add_name remove_name rmdir relabelfrom };
+allow system_server sysfs_leds:file { create open read write setattr getattr map ioctl relabelfrom };
+allow system_server sysfs_leds:lnk_file { create read setattr getattr relabelfrom relabelto unlink };

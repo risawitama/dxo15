@@ -420,6 +420,17 @@ subsystem mem_buf_vm
 /sys/class/leds/blue      start_idx          0666    system    system
 /sys/class/leds/blue      trigger            0666    system    system
 
+/sys/class/leds/white     blink              0666    system    system
+/sys/class/leds/white     breath             0666    system    system
+/sys/class/leds/white     brightness         0666    system    system
+/sys/class/leds/white     duty_pcts          0666    system    system
+/sys/class/leds/white     max_brightness     0666    system    system
+/sys/class/leds/white     pause_hi           0666    system    system
+/sys/class/leds/white     pause_lo           0666    system    system
+/sys/class/leds/white     ramp_step_ms       0666    system    system
+/sys/class/leds/white     start_idx          0666    system    system
+/sys/class/leds/white     trigger            0666    system    system
+
 /sys/class/backlight/backlight           brightness          0666    system    system
 /sys/class/backlight/backlight           max_brightness      0666    system    system
 

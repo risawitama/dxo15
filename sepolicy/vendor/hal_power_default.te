@@ -3,3 +3,11 @@ allow hal_power_default sysfs_graphics:file r_file_perms;
 # Allow to write in /dev/input/event2
 allow hal_power_default input_device:dir search;
 allow hal_power_default input_device:chr_file rw_file_perms;
+
+# LEDS
+allow hal_power_default sysfs_leds:dir { create search getattr open read setattr ioctl write add_name remove_name rmdir relabelfrom };
+allow hal_power_default sysfs_leds:file { create open read write setattr getattr map ioctl relabelfrom };
+allow hal_power_default sysfs_leds:lnk_file { create read setattr getattr relabelfrom relabelto unlink };
+allow hal_power_default sysfs_battery_supply:dir { create search getattr open read setattr ioctl write add_name remove_name rmdir relabelfrom };
+allow hal_power_default sysfs_battery_supply:file { create open read write setattr getattr map ioctl relabelfrom };
+allow hal_power_default sysfs_battery_supply:lnk_file { create read setattr getattr relabelfrom relabelto unlink };

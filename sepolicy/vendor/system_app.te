@@ -20,6 +20,11 @@ allow system_app sysfs_rtc:dir search;
 allow system_app sysfs_rtc:file { open read getattr };
 
 # Health HAL
-r_dir_file(system_app, sysfs_battery_supply)
-allow system_app sysfs_battery_supply:dir { search };
-allow system_app sysfs_battery_supply:file { open read write setattr getattr map ioctl relabelfrom };
+allow system_app sysfs_battery_supply:dir { create search getattr open read setattr ioctl write add_name remove_name rmdir relabelfrom };
+allow system_app sysfs_battery_supply:file { create open read write setattr getattr map ioctl relabelfrom };
+allow system_app sysfs_battery_supply:lnk_file { create read setattr getattr relabelfrom relabelto unlink };
+
+# LEDS
+allow system_app sysfs_leds:dir { create search getattr open read setattr ioctl write add_name remove_name rmdir relabelfrom };
+allow system_app sysfs_leds:file { create open read write setattr getattr map ioctl relabelfrom };
+allow system_app sysfs_leds:lnk_file { create read setattr getattr relabelfrom relabelto unlink };

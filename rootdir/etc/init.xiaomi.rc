@@ -27,7 +27,7 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-# LED Notification
+# LEDS
 on early-init && property:ro.boot.mode=charger
     chown system system /sys/class/leds/red/brightness
     chown system system /sys/class/leds/red/max_brightness
