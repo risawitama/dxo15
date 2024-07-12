@@ -55,7 +55,7 @@
     <bool translatable="false" name="config_wifiDriverSupportedNl80211RegChangedEvent">true</bool>
 
     <!-- Wifi driver supports WPA3 Simultaneous Authentication of Equals (WPA3-SAE) for softap -->
-    <bool translatable="false" name="config_wifi_softap_sae_supported">false</bool>
+    <bool translatable="false" name="config_wifi_softap_sae_supported">true</bool>
 
     <!-- True if the firmware supports Wi-Fi link probing -->
     <bool name="config_wifi_link_probing_supported">true</bool>

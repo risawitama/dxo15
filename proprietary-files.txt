@@ -1632,3 +1632,6 @@ vendor/lib64/libtime_genoff.so|8bb116ad297a5e4a94da2f10509509cb6e863a5f
 
 # Wi-Fi - from LA.UM.10.6.2.c26-01500-89xx.0
 vendor/bin/wcnss_service|18a234235418d01f7b6faa8a6bea78de5f4d346a
+
+# Wi-Fi - from QPR2 release (android-14.0.0_r35)
+vendor/bin/hw/wpa_supplicant|b92a24b4281b8573ff813ad1b454f827a5519936
