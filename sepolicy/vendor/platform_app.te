@@ -9,3 +9,6 @@ allow platform_app sysfs_leds:lnk_file { create read setattr getattr relabelfrom
 allow platform_app sysfs_battery_supply:dir { create search getattr open read setattr ioctl write add_name remove_name rmdir relabelfrom };
 allow platform_app sysfs_battery_supply:file { create open read write setattr getattr map ioctl relabelfrom };
 allow platform_app sysfs_battery_supply:lnk_file { create read setattr getattr relabelfrom relabelto unlink };
+allow platform_app sysfs_graphics:dir { create search getattr open read setattr ioctl write add_name remove_name rmdir relabelfrom };
+allow platform_app sysfs_graphics:file { create open read write setattr getattr map ioctl relabelfrom };
+allow platform_app sysfs_graphics:lnk_file { create read setattr getattr relabelfrom relabelto unlink };
