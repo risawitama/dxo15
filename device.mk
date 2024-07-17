@@ -183,8 +183,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.btconfigstore@1.0.vendor
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/platform/bluetooth/libldacBT_bco:$(TARGET_COPY_OUT_VENDOR)/lib/libldacBT_bco.so \
-    $(LOCAL_PATH)/platform/bluetooth/libldacBT_bco:$(TARGET_COPY_OUT_VENDOR)/lib64/libldacBT_bco.so
+    $(LOCAL_PATH)/platform/apex/libldacBT_bco:$(TARGET_COPY_OUT_VENDOR)/lib/libldacBT_bco.so \
+    $(LOCAL_PATH)/platform/apex/libldacBT_bco:$(TARGET_COPY_OUT_VENDOR)/lib64/libldacBT_bco.so
 
 # Camera
 PRODUCT_COPY_FILES += \
