@@ -1,1 +1,1 @@
-allow vdc self:capability { kill sys_admin sys_nice dac_override dac_read_search };
+allow vdc self:capability { setuid setgid kill sys_admin sys_nice dac_override dac_read_search sys_resource };
