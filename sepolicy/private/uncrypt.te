@@ -1,0 +1,3 @@
+allow uncrypt cache_file:dir { create search getattr open read setattr ioctl write add_name remove_name rmdir mounton relabelfrom };
+allow uncrypt cache_file:file { create open read write setattr getattr map ioctl relabelfrom };
+allow uncrypt self:capability { setuid setgid kill sys_admin sys_nice dac_override dac_read_search sys_resource };
