@@ -183,7 +183,6 @@ service.qti.ims.enabled=1
 
 #prefer HW codec over SW for thumbnail
 media.stagefright.thumbnail.prefer_hw_codecs=true
-debug.stagefright.ccodec=0
 
 # system prop for UBWC
 vendor.video.disable.ubwc=1
