@@ -57,6 +57,7 @@ debug.sf.predict_hwc_composition_strategy=0
 
 #Disable Skip Validate
 sdm.debug.disable_skip_validate=1
+ro.colorpick_adjust=true
 
 #Property to enable display default color mode
 persist.sys.sf.color_saturation=1.0
@@ -241,14 +242,8 @@ vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.line
 # enable temp dds
 persist.vendor.radio.enable_temp_dds=true
 
-#Disable Skip Validate
-ro.colorpick_adjust=true
-
 # system props for sar DSI
 persist.sys.sar.dsi=7
-
-# enable temp dds
-persist.vendor.radio.enable_temp_dds=true
 
 #add for color invert
 ro.vendor.df.effect.conflict=1
