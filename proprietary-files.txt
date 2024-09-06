@@ -1499,19 +1499,20 @@ vendor/lib/libperipheral_client.so|7ace2f7c8c7ebd986db6c7796de7237e584e658b
 vendor/lib64/libperipheral_client.so|9bfd41e276e16b8f7c6808f3d87531fc5be4cdd5
 
 # Secure MSM - from FP3-user 11 8901.4.A.0010 gms-f74c58a8 release-keys
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml|ebebcf8f367641480cf7d512fc06e6ab777527be
+-vendor/etc/vintf/manifest/manifest_android.hardware.drm-service.widevine.xml|7e13b6628572b1cdd76351b744e2805d4e6f2dd9
 system_ext/lib64/vendor.qti.hardware.tui_comm@1.0.so|9d36beb8fa964584aae64a109543a4997417d70a
-vendor/bin/hw/android.hardware.drm@1.3-service.widevine|57d280849768bc5d5e9e954b9ac90a5a31c54172
+vendor/bin/hw/android.hardware.drm-service.widevine|cdbd2b11c53df4c9151317d9990914d6fe6e526c
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|2e33e885b92e413440511049025497945d6b8484
 vendor/bin/hw/android.hardware.keymaster@4.0-service-qti|8bdb9313f8e5faff14d73730fc206803aecd7fbf
 vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service|a12cd8a3d326609ee0f0a0cdb5cfc69bd2085f1e
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|15378114c18fd1b1c8f9671f656396285ad1de48
 vendor/bin/qseecomd|5b40595c23a54d13fb611311a4ab9b22a9428e86
-vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc|a9ce64f68c86725c06c1b1429e90b04ff96ebf60
+vendor/etc/init/android.hardware.drm-service.widevine.rc|54c79ef531c9c135fa234a8515b3d37f0e1ccc4d
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc|1b8d5f58fe0a57906acf72b862c16a2521daa97b
 vendor/etc/init/android.hardware.keymaster@4.0-service-qti.rc|c8999fb1bccbef81e6b362059e9a6ebd023de98f
 vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc|c966350ee67d3a7c73ca7184e3725264025d16f5
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
+vendor/lib/libwvaidl.so|eb2d7348cfd83a663e0536436b86a9574ec4d925
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so|71b72d91eb94321a3b35d3e2b03a33e7b50d3b13
 vendor/lib64/hw/gatekeeper.msm8953.so|d760257a98254b9e87ae258e267b1a45a0ed7ecb
 vendor/lib64/hw/keystore.msm8953.so|83a48633d4530c45e36cfb9cd7f3d63a8a5bc122
@@ -1538,7 +1539,6 @@ vendor/lib64/librpmb.so|4ae66b5b5d27b0302bb1d0a5f2396958ed8209c9
 vendor/lib64/libsecureui.so|1cb5b3e219c31b6fe5e7ba5b27d434e045e085ed
 vendor/lib64/libsecureui_svcsock.so|ba9f7aa7605e54110afea5d9921381f6e6d71a19
 vendor/lib64/libssd.so|5b9ac8a457118b1e1b80f87fdc0e78d916ee099a
-vendor/lib64/libwvhidl.so|ac0b1ec273600257cbba84f43f153d8ebf4db872
 vendor/lib64/mediadrm/libwvdrmengine.so|fd0eecdd273d86563f95ae79cc80f9f51fc44e32
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so|0f684ab4d6f4b76b248b1da6e747ff2454c68d8c
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|f6b0e0e951394b609f0cb5c19e83a37447d9d292
