@@ -135,6 +135,7 @@ persist.sys.fuse.transcode_user_control=true
 pm.dexopt.downgrade_after_inactive_days=10
 pm.dexopt.shared=quicken
 renderthread.skia.reduceopstasksplitting=true
+ro.config.avoid_gfx_accel=true
 ro.lmk.use_psi=true
 ro.lmk.critical_upgrade=true
 ro.lmk.upgrade_pressure=40
@@ -145,9 +146,10 @@ ro.lmk.kill_timeout_ms=50
 ro.lmk.thrashing_limit=30
 ro.lmk.thrashing_limit_decay=50
 ro.lmk.swap_free_low_percentage=10
-ro.lmk.swap_util_max=70
+ro.lmk.swap_util_max=50
 ro.vendor.qti.am.reschedule_service=true
 ro.vendor.qti.sys.fw.bservice_enable=true
+persist.sys.purgeable_assets=1
 ro.hw_timeout_multiplier=4
 
 #system prop for Bluetooth SOC type
