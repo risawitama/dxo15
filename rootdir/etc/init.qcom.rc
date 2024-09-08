@@ -470,11 +470,9 @@ on property:sys.boot_completed=1
     swapon_all /vendor/etc/fstab.enableswap
 
     write /proc/sys/vm/swappiness 100
-    write /proc/sys/vm/dirty_background_ratio 15
-    write /proc/sys/vm/vfs_cache_pressure 200
-    write /proc/sys/vm/dirty_writeback_centisecs 3000
-    write /proc/sys/vm/drop_caches 3
-    write /proc/sys/vm/oom_kill_allocating_task 0
+    write /proc/sys/vm/dirty_background_ratio 20
+    write /proc/sys/vm/vfs_cache_pressure 100
+    write /proc/sys/vm/dirty_ratio 5
 
     setprop lmkd.reinit 1
 
