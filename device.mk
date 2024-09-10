@@ -226,6 +226,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     disable_configstore
 
+# Device specific remove packages
+PRODUCT_PACKAGES += \
+    ONCRemover
+
 # Display
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.picture_in_picture.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.picture_in_picture.xml \
@@ -290,10 +294,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     com.fingerprints.extension@1.0.vendor \
     vendor.xiaomi.hardware.fingerprintextension@1.0.vendor
-
-# FM Radio
-PRODUCT_PACKAGES += \
-    FMRadioExclude
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
