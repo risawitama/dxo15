@@ -486,6 +486,7 @@ PRODUCT_PACKAGES += \
 
 # QTI
 PRODUCT_PACKAGES += \
+    libutils.vendor \
     libsqlite.vendor \
     libsysutils.vendor \
     libcrypto_utils.vendor \
