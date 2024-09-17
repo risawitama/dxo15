@@ -450,8 +450,11 @@ PRODUCT_PACKAGES += \
     libstagefrighthw
 
 PRODUCT_PACKAGES += \
+    libstagefright_softomx.vendor \
     libstagefright_softomx \
+    libstagefright_softomx_plugin.vendor \
     libstagefright_softomx_plugin \
+    libstagefright_enc_common.vendor \
     libstagefright_enc_common
 
 # Power
