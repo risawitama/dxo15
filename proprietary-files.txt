@@ -1,5 +1,5 @@
 # Alarm - from LA.UM.10.6.2.c26-01500-89xx.0
--product/app/PowerOffAlarm/PowerOffAlarm.apk|c7a8a195c47e1a3386173106ff6e2a68403b2e14
+product/app/PowerOffAlarm/PowerOffAlarm.apk|c7a8a195c47e1a3386173106ff6e2a68403b2e14
 system_ext/lib/vendor.qti.hardware.alarm@1.0.so|f01584c5271e495490993ba505d9f3b46f280020
 system_ext/lib64/vendor.qti.hardware.alarm@1.0.so|abf6cf11e5f5f3b5a111350aae351df62532ed71
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|e8f29b90facd4d605dca41644f5a0dc77f6d2e9b
@@ -869,35 +869,35 @@ vendor/lib64/libvideoutils.so|42ffbcce5e16eacbb089fc6ae27af8e1a66284f3
 vendor/bin/hvdcp_opti|6ec9cb75b547cf03fa9b987e65ced561f18ce981
 
 # Connectivity - from FP3-user 11 8901.4.A.0010 gms-f74c58a8 release-keys
--system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|fb276d576e5775bfdeed30b4a87f8c1b1e95a7f0
--system_ext/app/embms/embms.apk|09134a1bd2d67e55caf81af08ac44f02abd55d18
--system_ext/app/imssettings/imssettings.apk|cb9ef8ac8cccf1deededfca80b2a79f8972f82df
--system_ext/framework/com.qualcomm.qti.imscmservice-V2.0-java.jar|bc9bce9bcc7250bfba907db6a16b74a92bcb8e38
--system_ext/framework/com.qualcomm.qti.imscmservice-V2.1-java.jar|13df5f82893912b9c040fa72ff2ca97ebc6023b6
--system_ext/framework/com.qualcomm.qti.imscmservice-V2.2-java.jar|b95b2b4dccd365ae7b09b8982b61184fe82630f7
--system_ext/framework/com.qualcomm.qti.uceservice-V2.0-java.jar|e373bf8dddb0a7b79e36653c22637666cef296be
--system_ext/framework/com.qualcomm.qti.uceservice-V2.1-java.jar|7a073d87c95fb3c65fd5a9b1454d20b38f8e258f
--system_ext/framework/com.qualcomm.qti.uceservice-V2.2-java.jar|275b1cd69af00c3668376359f73b28b41ca0a473
--system_ext/framework/com.qualcomm.qti.uceservice-V2.3-java.jar|c9f201e6045a9a2a0b72ecb8a1afe95644e9d758
--system_ext/framework/embmslibrary.jar|b5fe26c1cea597af8a1751332d187f2f574816c1
--system_ext/framework/qcrilhook.jar|7b1352344ab743c031502365c09d771d96a1283b
--system_ext/framework/qti-telephony-common.jar|4c1b043536ab8ad9d156668d94b60bc86ffbe278
--system_ext/framework/vendor.qti.hardware.data.latency-V1.0-java.jar|68068cdbd044dca2872284ebcd2909eb74c3a804
--system_ext/framework/vendor.qti.ims.callcapability-V1.0-java.jar|3cdfb07c3f33bf6ea1cfac52bd125f959995872a
--system_ext/framework/vendor.qti.ims.callinfo-V1.0-java.jar|3993d8d98969d0eaa7b5676128e85718588677d0
--system_ext/framework/vendor.qti.ims.factory-V1.0-java.jar|cd039a9c8d919332d57f9945a92ccac21f20d6c5
--system_ext/framework/vendor.qti.ims.factory-V1.1-java.jar|ab9114d0a99a7155d625ff04bf8d20a03fdfc10f
--system_ext/framework/vendor.qti.ims.rcsconfig-V1.0-java.jar|abbfa2c4003a0b6e4906225c623c7d001ed6258a
--system_ext/framework/vendor.qti.ims.rcsconfig-V1.1-java.jar|f0348553c3c777d53725d6d4d55fa9c218d8ee49
--system_ext/framework/vendor.qti.ims.rcsconfig-V2.0-java.jar|dc0be9b3621fdaa8eaf8d4fad5c8d2365c9beef8
--system_ext/framework/vendor.qti.ims.rcsconfig-V2.1-java.jar|af9770ca830ad0228890254ae0d735993e0af22c
--system_ext/framework/vendor.qti.latency-V2.0-java.jar|239a5cf7f057d3e93c0fe7cb33ee6be088ad2aac
--system_ext/framework/vendor.qti.latency-V2.1-java.jar|b292cd4c9b1140ebc3cb6873106389483214eee2
--system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk|10828ba0d987fa884ad0b4a87a46bf9f505535ea
--system_ext/priv-app/ims/ims.apk|298c0db66e70060cca2a380d19e5fe07f059ad23
--system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|9628504bb7540ebedad3c1f618647421c8288b7e
--vendor/app/CneApp/CneApp.apk|551d0e3251eeda3af8dfa8bb55cd83b858365db8
--vendor/app/IWlanService/IWlanService.apk|a8bdac9638bc711e23269d2eead3f46a7b3b6a25
+system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|fb276d576e5775bfdeed30b4a87f8c1b1e95a7f0
+system_ext/app/embms/embms.apk|09134a1bd2d67e55caf81af08ac44f02abd55d18
+system_ext/app/imssettings/imssettings.apk|cb9ef8ac8cccf1deededfca80b2a79f8972f82df
+system_ext/framework/com.qualcomm.qti.imscmservice-V2.0-java.jar|bc9bce9bcc7250bfba907db6a16b74a92bcb8e38
+system_ext/framework/com.qualcomm.qti.imscmservice-V2.1-java.jar|13df5f82893912b9c040fa72ff2ca97ebc6023b6
+system_ext/framework/com.qualcomm.qti.imscmservice-V2.2-java.jar|b95b2b4dccd365ae7b09b8982b61184fe82630f7
+system_ext/framework/com.qualcomm.qti.uceservice-V2.0-java.jar|e373bf8dddb0a7b79e36653c22637666cef296be
+system_ext/framework/com.qualcomm.qti.uceservice-V2.1-java.jar|7a073d87c95fb3c65fd5a9b1454d20b38f8e258f
+system_ext/framework/com.qualcomm.qti.uceservice-V2.2-java.jar|275b1cd69af00c3668376359f73b28b41ca0a473
+system_ext/framework/com.qualcomm.qti.uceservice-V2.3-java.jar|c9f201e6045a9a2a0b72ecb8a1afe95644e9d758
+system_ext/framework/embmslibrary.jar|b5fe26c1cea597af8a1751332d187f2f574816c1
+system_ext/framework/qcrilhook.jar|7b1352344ab743c031502365c09d771d96a1283b
+system_ext/framework/qti-telephony-common.jar|4c1b043536ab8ad9d156668d94b60bc86ffbe278
+system_ext/framework/vendor.qti.hardware.data.latency-V1.0-java.jar|68068cdbd044dca2872284ebcd2909eb74c3a804
+system_ext/framework/vendor.qti.ims.callcapability-V1.0-java.jar|3cdfb07c3f33bf6ea1cfac52bd125f959995872a
+system_ext/framework/vendor.qti.ims.callinfo-V1.0-java.jar|3993d8d98969d0eaa7b5676128e85718588677d0
+system_ext/framework/vendor.qti.ims.factory-V1.0-java.jar|cd039a9c8d919332d57f9945a92ccac21f20d6c5
+system_ext/framework/vendor.qti.ims.factory-V1.1-java.jar|ab9114d0a99a7155d625ff04bf8d20a03fdfc10f
+system_ext/framework/vendor.qti.ims.rcsconfig-V1.0-java.jar|abbfa2c4003a0b6e4906225c623c7d001ed6258a
+system_ext/framework/vendor.qti.ims.rcsconfig-V1.1-java.jar|f0348553c3c777d53725d6d4d55fa9c218d8ee49
+system_ext/framework/vendor.qti.ims.rcsconfig-V2.0-java.jar|dc0be9b3621fdaa8eaf8d4fad5c8d2365c9beef8
+system_ext/framework/vendor.qti.ims.rcsconfig-V2.1-java.jar|af9770ca830ad0228890254ae0d735993e0af22c
+system_ext/framework/vendor.qti.latency-V2.0-java.jar|239a5cf7f057d3e93c0fe7cb33ee6be088ad2aac
+system_ext/framework/vendor.qti.latency-V2.1-java.jar|b292cd4c9b1140ebc3cb6873106389483214eee2
+system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk|10828ba0d987fa884ad0b4a87a46bf9f505535ea
+system_ext/priv-app/ims/ims.apk|298c0db66e70060cca2a380d19e5fe07f059ad23
+system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|9628504bb7540ebedad3c1f618647421c8288b7e
+vendor/app/CneApp/CneApp.apk|551d0e3251eeda3af8dfa8bb55cd83b858365db8
+vendor/app/IWlanService/IWlanService.apk|a8bdac9638bc711e23269d2eead3f46a7b3b6a25
 system_ext/bin/dpmd|dc94ffe90c6658b0bc99c64f68517c4048d0321a
 system_ext/etc/dpm/dpm.conf|95e27da8c989e96c6faea6f0697bce11955b62a5
 system_ext/etc/init/dpmd.rc|738b638ff04cda368e22c03e16baf90ba157a6fc
@@ -1279,8 +1279,8 @@ vendor/lib64/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib64/libGLESv2_adreno.so|4c
 vendor/lib64/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib64/libq3dtools_adreno.so|14f0c59216408199db6ce349a57ff82d2036d8e2
 
 # Display (HAL) - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
--vendor/lib/libsdm-disp-vndapis.so|9bd99e0024f5abcc285f64aadea8725556f16789
--vendor/lib64/libsdm-disp-vndapis.so|b1dede9efa81e8d0374343612ad7ad0d967e8e29
+vendor/lib/libsdm-disp-vndapis.so|9bd99e0024f5abcc285f64aadea8725556f16789
+vendor/lib64/libsdm-disp-vndapis.so|b1dede9efa81e8d0374343612ad7ad0d967e8e29
 etc/permissions/com.qti.snapdragon.sdk.display.xml|0bff16d681e75f203c1e11ff33afba82490e49b3
 framework/com.qti.snapdragon.sdk.display.jar|495d45dd84a61e873a3d1176ab7741826e60d7f1
 vendor/bin/hw/vendor.display.color@1.0-service|dd461fbbbdc7175b8e1e37eba19bc1c48111b5b6
@@ -1354,9 +1354,9 @@ vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|7eb9a18ddc6b8199aa81770add499
 vendor/lib64/vendor.qti.hardware.fm@1.0.so|f7494923e84b136a44f02699082a7e0a380f94e9
 
 # Fingerprint (OSS) - from hardware/xiaomi
--vendor/app/FingerprintExtensionService/FingerprintExtensionService.apk|947aa5bdb5db6144f29e17869baa9fbbdadc9fe7
--vendor/etc/vintf/manifest/android.hardware.biometrics.fingerprint@2.1-service.xml|79dda5cfe60829376b6cea76f922e1da432e67d7
--vendor/framework/com.fingerprints.extension.jar|10c37dd77e3ec6f25f478af324e91310961aae08
+vendor/app/FingerprintExtensionService/FingerprintExtensionService.apk|947aa5bdb5db6144f29e17869baa9fbbdadc9fe7
+vendor/etc/vintf/manifest/android.hardware.biometrics.fingerprint@2.1-service.xml|79dda5cfe60829376b6cea76f922e1da432e67d7
+vendor/framework/com.fingerprints.extension.jar|10c37dd77e3ec6f25f478af324e91310961aae08
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service|73634e595e6fbf5a313d637e87d6d2a00e851c00
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc|a074aa25cbb5e7aab9d2b8cabea56992632ab685
 vendor/etc/permissions/com.fingerprints.extension.xml|de711d8827e1d321b22b60fd75a204e8928f9c6d
@@ -1372,9 +1372,9 @@ vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0.so|3964053873ea8a2b405c9b
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so|81e17cf374b4090278d6cfea5c41d5c95cb264e4
 
 # GPS (Global Positioning System) - from LA.UM.10.6.2.r1-02500-89xx.0
--vendor/app/CACertService/CACertService.apk|b08fa7c9d2faba99547db99df908909dfc0c8e90
--vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml|1c344aacaa6d17a1585ba58b2e6d438dcfe31fad
--vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml|6514b13f55abc0acc28e004c35ff93fb972d61a9
+vendor/app/CACertService/CACertService.apk|b08fa7c9d2faba99547db99df908909dfc0c8e90
+vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml|1c344aacaa6d17a1585ba58b2e6d438dcfe31fad
+vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml|6514b13f55abc0acc28e004c35ff93fb972d61a9
 vendor/bin/hw/android.hardware.gnss@2.1-service-qti|d458a2aadc1d00df4696d6793e550f4a9422a2c9
 vendor/bin/loc_launcher|c9a2f764201ee679c29463f405abd9625c421afc
 vendor/bin/lowi-server|ebd86e50afa27c57b1c24abec2faec4dbe312dc5
@@ -1423,8 +1423,8 @@ vendor/lib64/vendor.qti.hardware.cacert@1.0.so|398e5510db4d739de008b7230aa6e688d
 vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so|19a1f7ffb8118c207aa8cb2318996605771c339a
 
 # Media (HAL) - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
--vendor/lib/libgpustats.so|75fc8f58b071f3c27d708010e1b40eafba091a14
--vendor/lib64/libgpustats.so|a899ae72983277442cdacf8f43271986c91ce710
+vendor/lib/libgpustats.so|75fc8f58b071f3c27d708010e1b40eafba091a14
+vendor/lib64/libgpustats.so|a899ae72983277442cdacf8f43271986c91ce710
 vendor/lib/libI420colorconvert.so|0dfd4d0e49f4250e98e781483048a296a679e05e
 vendor/lib/libOmxAacDec.so|55772a6d0cf3e6a5a2c32348fd7096b8737d490b
 vendor/lib/libOmxAlacDec.so|adca064b15a7d545075af6f5222db45dec8202b5
@@ -1499,7 +1499,7 @@ vendor/lib/libperipheral_client.so|7ace2f7c8c7ebd986db6c7796de7237e584e658b
 vendor/lib64/libperipheral_client.so|9bfd41e276e16b8f7c6808f3d87531fc5be4cdd5
 
 # Secure MSM - from FP3-user 11 8901.4.A.0010 gms-f74c58a8 release-keys
--vendor/etc/vintf/manifest/manifest_android.hardware.drm-service.widevine.xml|7e13b6628572b1cdd76351b744e2805d4e6f2dd9
+vendor/etc/vintf/manifest/manifest_android.hardware.drm-service.widevine.xml|7e13b6628572b1cdd76351b744e2805d4e6f2dd9
 system_ext/lib64/vendor.qti.hardware.tui_comm@1.0.so|9d36beb8fa964584aae64a109543a4997417d70a
 vendor/bin/hw/android.hardware.drm-service.widevine|cdbd2b11c53df4c9151317d9990914d6fe6e526c
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|2e33e885b92e413440511049025497945d6b8484
@@ -1607,8 +1607,8 @@ vendor/lib64/sensor_calibrate.so|219ee0b1bdcc6a3f0b9261f6fc31838916856c99
 vendor/lib64/sensors.ssc.so|863de4d737c389c059670d8e1592bba58ae33de3
 
 # Soter (Legacy) - from MIUI
--product/framework/vendor.qti.hardware.soter-V1.0-java.jar|e0a20a638cac4e369a29157ea4aa44b1e5d60f8f
--vendor/app/SoterService/SoterService.apk|a906b956cff77c2a1bcb26d8a74ecd386b50eeb2
+product/framework/vendor.qti.hardware.soter-V1.0-java.jar|e0a20a638cac4e369a29157ea4aa44b1e5d60f8f
+vendor/app/SoterService/SoterService.apk|a906b956cff77c2a1bcb26d8a74ecd386b50eeb2
 product/lib/vendor.qti.hardware.soter@1.0.so|45a8cbdcd816240934f523157c56e21e315e26d6
 product/lib64/vendor.qti.hardware.soter@1.0.so|eb92f6de6b7fe38c4c977e2effc33f53d825ca90
 vendor/bin/SoterProvisioningTool|7d96b4b30201294e645d684c17c6472bf3b78392
@@ -1621,8 +1621,8 @@ vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so|011245d9368c2ab824d9cf09b8
 vendor/lib64/vendor.qti.hardware.soter@1.0.so|5009b4dc1e8469186530f44bd5f184a7a8f51266
 
 # Thermal - from MIUI
--vendor/lib/libthermalclient.so|a18540af4380aab3d6e6e880241b0c74c7967c0b
--vendor/lib64/libthermalclient.so|13c27adf6e6ce8728854542c3ed8f3d12ade5615
+vendor/lib/libthermalclient.so|a18540af4380aab3d6e6e880241b0c74c7967c0b
+vendor/lib64/libthermalclient.so|13c27adf6e6ce8728854542c3ed8f3d12ade5615
 vendor/bin/thermal-engine|a8bc9bb1ed717c886316dd42b8af0ebb59b2bbec
 vendor/etc/thermal-engine-map.conf|474264ed357e02b7bb8b757024275a4cb8ff2929
 vendor/etc/thermal-engine-normal.conf|40a3472fb78ee14f295d906ca14a59696504d45a
@@ -1632,6 +1632,6 @@ vendor/lib/libthermalfeature.so|b2a90496eb99301cc0f065fe97782358858668a3
 vendor/lib64/libthermalfeature.so|1c408911610e5b6a11853aff1900860f9e9a861f
 
 # Time - from LA.UM.10.6.2.r1-02500-89xx.0
--vendor/app/TimeService/TimeService.apk|1a5f39aa2969feee50ff81ec870b5e2669ae515e
+vendor/app/TimeService/TimeService.apk|1a5f39aa2969feee50ff81ec870b5e2669ae515e
 vendor/bin/time_daemon|48401d7f85c87aa3e12ce7b4a969a50cbf59c293
 vendor/lib64/libtime_genoff.so|8bb116ad297a5e4a94da2f10509509cb6e863a5f
