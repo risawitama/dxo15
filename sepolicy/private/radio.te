@@ -1,2 +1,8 @@
 allow radio system_app_data_file:dir r_dir_perms;
 allow radio system_app_data_file:file r_file_perms;
+
+get_prop(radio, default_prop)
+set_prop(radio, default_prop)
+
+get_prop(radio, vendor_default_prop)
+set_prop(radio, vendor_default_prop)

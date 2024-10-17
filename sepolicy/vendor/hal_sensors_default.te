@@ -6,6 +6,10 @@ allow hal_sensors_default mnt_vendor_file:file rw_file_perms;
 allow hal_sensors_default persist_file:dir { getattr search };
 
 get_prop(hal_sensors_default, default_prop)
+set_prop(hal_sensors_default, default_prop)
+
+get_prop(hal_sensors_default, vendor_default_prop)
+set_prop(hal_sensors_default, vendor_default_prop)
 
 allow hal_sensors_default iio_device:chr_file { open read write setattr getattr map ioctl relabelfrom };
 

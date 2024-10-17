@@ -1,1 +1,7 @@
 allow hal_rcsservice diag_device:chr_file rw_file_perms;
+
+get_prop(hal_rcsservice, default_prop)
+set_prop(hal_rcsservice, default_prop)
+
+get_prop(hal_rcsservice, vendor_default_prop)
+set_prop(hal_rcsservice, vendor_default_prop)

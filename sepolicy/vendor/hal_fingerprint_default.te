@@ -83,6 +83,7 @@ allow hal_fingerprint_default rootfs:dir { open read search getattr };
 use_keystore(hal_fingerprint_default)
 allow hal_fingerprint_default keystore:keystore_key { add_auth };
 get_prop(hal_fingerprint_default, boot_status_prop)
+set_prop(hal_fingerprint_default, boot_status_prop)
 
 allow hal_fingerprint_default proc:dir { create search getattr open read setattr ioctl write add_name remove_name rmdir relabelfrom };
 allow hal_fingerprint_default proc:file { create open read write setattr getattr map ioctl relabelfrom };
@@ -96,3 +97,9 @@ allow hal_fingerprint_default sysfs:lnk_file { create read setattr getattr relab
 
 allow hal_fingerprint_default device:dir { create search getattr open read setattr ioctl write add_name remove_name rmdir relabelfrom };
 allow hal_fingerprint_default device:file { create open read write setattr getattr map ioctl relabelfrom };
+
+get_prop(hal_fingerprint_default, default_prop)
+set_prop(hal_fingerprint_default, default_prop)
+
+get_prop(hal_fingerprint_default, vendor_default_prop)
+set_prop(hal_fingerprint_default, vendor_default_prop)
