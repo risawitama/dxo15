@@ -616,6 +616,27 @@ function disable_core_ctl() {
     fi
 }
 
+function ram_plus() {
+    # Define the path of Swap folder
+    RAM_PLUS_SWAPFILE="/data/vendor/swap"
+
+    # Check if the folder exists
+    if [ -d "$RAM_PLUS_SWAPFILE" ]; then
+        # Delete the folder
+        rm -rf "$RAM_PLUS_SWAPFILE"
+    fi
+
+    if [ ! -f /data/swapfile ]; then
+        dd if=/dev/zero of=/data/swapfile bs=1G count=2
+    fi
+
+    chown root:root /data/swapfile
+    chmod 0600 /data/swapfile
+
+    mkswap /data/swapfile
+    swapon /data/swapfile
+}
+
 function configure_memory_parameters() {
     # Set Memory parameters.
     #
@@ -742,31 +763,20 @@ else
         echo 7680 > /sys/module/process_reclaim/parameters/tsk_nomap_swap_sz
     fi
 
-    # Set allocstall_threshold to 0 for all targets.
+    # Memory optimization
     echo 0 > /sys/module/vmpressure/parameters/allocstall_threshold
-
-    # Disable wsf for all targets beacause we are using efk.
-    # wsf Range : 1..1000 So set to bare minimum value 1.
+    echo 150 > /proc/sys/vm/swappiness
     echo 1 > /proc/sys/vm/watermark_scale_factor
+    echo 1 > /sys/module/zswap/parameters/enabled
+    echo z3fold > /sys/module/zswap/parameters/zpool
+    echo lz4 > /sys/module/zswap/parameters/compressor
+    echo 40 > /sys/module/zswap/parameters/max_pool_percent
+    echo 1 > /sys/module/zswap/parameters/same_filled_pages_enabled
 
+    # Enable function
     configure_read_ahead_kb_values
+    ram_plus
 fi
-}
-
-function enable_memory_features()
-{
-    MemTotalStr=`cat /proc/meminfo | grep MemTotal`
-    MemTotal=${MemTotalStr:16:8}
-
-    if [ $MemTotal -le 2097152 ]; then
-        #Enable B service adj transition for 2GB or less memory
-        setprop ro.vendor.qti.sys.fw.bservice_enable true
-        setprop ro.vendor.qti.sys.fw.bservice_limit 5
-        setprop ro.vendor.qti.sys.fw.bservice_age 5000
-
-        #Enable Delay Service Restart
-        setprop ro.vendor.qti.am.reschedule_service true
-    fi
 }
 
 function start_hbtp()
@@ -1935,8 +1945,6 @@ case "$target" in
 
             ;;
         esac
-        #Enable Memory Features
-        enable_memory_features
         restorecon -R /sys/devices/system/cpu
     ;;
 esac
@@ -2277,7 +2285,6 @@ case "$target" in
                 echo "4-7" > /sys/module/big_cluster_min_freq_adjust/parameters/min_freq_cluster
             fi
             echo 1 > /sys/module/big_cluster_min_freq_adjust/parameters/min_freq_adjust
-
             ;;
         esac
     ;;
@@ -4161,7 +4168,6 @@ case "$target" in
 
             # Turn on sleep modes.
             echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
-            echo 100 > /proc/sys/vm/swappiness
             ;;
         esac
     ;;
@@ -4715,8 +4721,6 @@ case "$target" in
 	echo N > /sys/module/lpm_levels/L3/l3-dyn-ret/idle_enabled
         # Turn on sleep modes.
         echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
-	echo 100 > /proc/sys/vm/swappiness
-	echo 120 > /proc/sys/vm/watermark_scale_factor
     ;;
 esac
 
@@ -4787,10 +4791,6 @@ case "$target" in
 	# configure input boost settings
 	echo "0:1324800" > /sys/module/cpu_boost/parameters/input_boost_freq
 	echo 120 > /sys/module/cpu_boost/parameters/input_boost_ms
-
-	# Disable wsf, beacause we are using efk.
-	# wsf Range : 1..1000 So set to bare minimum value 1.
-        echo 1 > /proc/sys/vm/watermark_scale_factor
 
         echo 0-3 > /dev/cpuset/background/cpus
         echo 0-3 > /dev/cpuset/system-background/cpus
@@ -4963,10 +4963,6 @@ case "$target" in
 	# configure input boost settings
 	echo "0:1324800" > /sys/module/cpu_boost/parameters/input_boost_freq
 	echo 120 > /sys/module/cpu_boost/parameters/input_boost_ms
-
-	# Disable wsf, beacause we are using efk.
-	# wsf Range : 1..1000 So set to bare minimum value 1.
-        echo 1 > /proc/sys/vm/watermark_scale_factor
 
         echo 0-3 > /dev/cpuset/background/cpus
         echo 0-3 > /dev/cpuset/system-background/cpus

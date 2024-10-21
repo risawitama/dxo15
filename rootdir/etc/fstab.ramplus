@@ -1,0 +1,9 @@
+#
+# Copyright (C) 2017-2024 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+/dev/block/zram0     none     swap     defaults           pri=100
+
+/data/swapfile       none     swap     defaults,pri=0     0 0

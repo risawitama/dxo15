@@ -425,10 +425,6 @@ on post-fs-data
     chown radio radio /data/vendor/radio/db_check_done
     chmod 0660 /data/vendor/radio/db_check_done
 
-    #Create SWAP related dirs
-    mkdir /data/vendor/swap 0770 root system
-    chmod 2770 /data/vendor/swap
-
     # Sensors
     chmod 0775 /persist/sensors
     chmod 0664 /persist/sensors/sensors_settings
@@ -468,13 +464,6 @@ on property:sys.boot_completed=1
     setprop vendor.post_boot.parsed 1
 
     swapon_all /vendor/etc/fstab.enableswap
-
-    write /proc/sys/vm/swappiness 150
-    write /proc/sys/vm/dirty_background_ratio 5
-    write /proc/sys/vm/vfs_cache_pressure 150
-    write /proc/sys/vm/dirty_ratio 3
-
-    setprop lmkd.reinit 1
 
 on property:persist.vendor.radio.atfwd.start=false
     stop vendor.atfwd
@@ -584,6 +573,8 @@ service qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
 
 on property:sys.boot_completed=1
     start qcom-post-boot
+    swapon_all /vendor/etc/fstab.ramplus
+    setprop lmkd.reinit 1
 
 service vendor.ril-daemon /vendor/bin/hw/rild
     override
