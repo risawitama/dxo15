@@ -31,3 +31,6 @@ allow system_app sysfs_leds:lnk_file { create read setattr getattr relabelfrom r
 allow system_app sysfs_graphics:dir { create search getattr open read setattr ioctl write add_name remove_name rmdir relabelfrom };
 allow system_app sysfs_graphics:file { create open read write setattr getattr map ioctl relabelfrom };
 allow system_app sysfs_graphics:lnk_file { create read setattr getattr relabelfrom relabelto unlink };
+
+get_prop(system_app, vendor_deviceid_prop)
+set_prop(system_app, vendor_deviceid_prop)
