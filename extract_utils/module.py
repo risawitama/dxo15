@@ -319,6 +319,7 @@ class ExtractUtilsModule:
         extract_fns: Optional[extract_fns_user_type] = None,
         check_elf=False,
         add_firmware_proprietary_file=False,
+        add_generated_carriersettings_file=False,
         add_generated_carriersettings=False,
         skip_main_proprietary_file=False,
     ):
@@ -352,6 +353,8 @@ class ExtractUtilsModule:
 
         if add_generated_carriersettings:
             self.add_generated_carriersettings()
+        elif add_generated_carriersettings_file:
+            self.add_generated_carriersettings_file()
 
         if not skip_main_proprietary_file:
             self.add_proprietary_file('proprietary-files.txt')
@@ -433,10 +436,9 @@ class ExtractUtilsModule:
         self.proprietary_files.append(proprietary_file)
         return proprietary_file
 
-    def add_generated_carriersettings(self):
+    def add_generated_carriersettings_file(self):
         pb_partition = 'product'
         pb_dir_rel_path = 'etc/CarrierSettings'
-        package_name = 'CarrierConfigOverlay'
 
         file_list_path = self.proprietary_file_path(
             'proprietary-files-carriersettings.txt'
@@ -448,6 +450,11 @@ class ExtractUtilsModule:
             r'\.pb$',
         )
         self.proprietary_files.append(proprietary_file)
+        return proprietary_file
+
+    def add_generated_carriersettings(self):
+        package_name = 'CarrierConfigOverlay'
+        proprietary_file = self.add_generated_carriersettings_file()
         self.add_rro_package(
             package_name,
             'com.android.carrierconfig',
