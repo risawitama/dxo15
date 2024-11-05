@@ -334,6 +334,7 @@ def write_app_package(file: File, builder: FileBpBuilder):
         .signature()
         .set('dex_preopt', {'enabled': False})
         .set('privileged', file.privileged, optional=True)
+        .skip_preprocessed_apk_checks()
         .specific()
     )
     return package_name

@@ -205,6 +205,13 @@ class FileBpBuilder(BpBuilder):
             self.set('certificate', 'platform')
         return self
 
+    def skip_preprocessed_apk_checks(self) -> Self:
+        return self.set(
+            'skip_preprocessed_apk_checks',
+            self.__file.skip_preprocessed_apk_checks,
+            optional=True,
+        )
+
     def target(self, f: File, machine: EM, deps: Optional[List[str]]) -> Self:
         target = self.o.setdefault('target', {})
 

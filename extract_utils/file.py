@@ -53,6 +53,7 @@ class FileArgs(str, Enum):
     OVERRIDES = 'OVERRIDES'
     PRESIGNED = 'PRESIGNED'
     REQUIRED = 'REQUIRED'
+    SKIPAPKCHECKS = 'SKIPAPKCHECKS'
     SYMLINK = 'SYMLINK'
     TRYSRCFIRST = 'TRYSRCFIRST'
 
@@ -70,6 +71,7 @@ FILE_ARGS_TYPE_MAP = {
     FileArgs.OVERRIDES: list,
     FileArgs.PRESIGNED: True,
     FileArgs.REQUIRED: list,
+    FileArgs.SKIPAPKCHECKS: True,
     FileArgs.SYMLINK: list,
     FileArgs.TRYSRCFIRST: True,
 }
@@ -270,6 +272,10 @@ class File:
     def privileged(self):
         privileged = self.contains_path_parts(['priv-app'])
         return True if privileged else None
+
+    @property
+    def skip_preprocessed_apk_checks(self):
+        return self.args.get(FileArgs.SKIPAPKCHECKS)
 
 
 T = TypeVar('T')
