@@ -617,6 +617,11 @@ function disable_core_ctl() {
 }
 
 function ram_plus() {
+    # Do not start if in offline charging mode
+    if [ "$(getprop ro.boot.mode)" = "charger" ] || [ "$(getprop ro.bootmode)" = "charger" ]; then
+        return
+    fi
+
     # Define the path of Swap folder
     RAM_PLUS_SWAPFILE="/data/vendor/swap"
 
@@ -626,6 +631,7 @@ function ram_plus() {
         rm -rf "$RAM_PLUS_SWAPFILE"
     fi
 
+    # Check if swap file exists
     if [ ! -f /data/swapfile ]; then
         dd if=/dev/zero of=/data/swapfile bs=1G count=2
     fi

@@ -8,3 +8,6 @@ set_prop(qti_init_shell, default_prop)
 
 get_prop(qti_init_shell, vendor_default_prop)
 set_prop(qti_init_shell, vendor_default_prop)
+
+get_prop(qti_init_shell, boot_status_prop)
+set_prop(qti_init_shell, boot_status_prop)
