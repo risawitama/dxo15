@@ -228,8 +228,8 @@ class FileBpBuilder(BpBuilder):
         self,
         files: List[File],
         machines: List[EM],
-        deps: Optional[List[str]],
+        depses: List[Optional[List[str]]],
     ) -> Self:
-        for f, machine in zip(files, machines):
+        for f, machine, deps in zip(files, machines, depses):
             self.target(f, machine, deps)
         return self

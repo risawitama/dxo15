@@ -13,7 +13,6 @@ from typing import List, Protocol, TextIO
 from extract_utils.bp_builder import BpBuilder, FileBpBuilder
 from extract_utils.bp_encoder import BpJSONEncoder
 from extract_utils.elf import (
-    get_file_machine_bits,
     get_file_machine_bits_libs,
     remove_libs_so_ending,
 )
@@ -189,28 +188,25 @@ def write_elfs_package(
     file = files[0]
 
     gen_deps, enable_check_elf = file_gen_deps_check_elf(ctx.check_elf, file)
-    file_path = f'{ctx.vendor_prop_path}/{file.dst}'
-    machine, bits, libs = get_file_machine_bits_libs(file_path, gen_deps)
-    deps = remove_libs_so_ending(libs)
 
-    if is_bin and (machine is None or bits is None):
-        return write_sh_package(files[0], builder, any_extension=True)
-
-    assert machine is not None
-    assert bits is not None
-    machines = [machine]
-    bitses = [bits]
+    machines = []
+    bitses = []
+    depses = []
 
     partition = builder.get_partition()
-    deps = run_libs_fixup(ctx.lib_fixups, deps, partition)
 
-    for f in files[1:]:
+    for f in files:
         f_path = f'{ctx.vendor_prop_path}/{f.dst}'
-        machine, bits = get_file_machine_bits(f_path)
-        assert machine is not None
-        assert bits is not None
+
+        machine, bits, libs = get_file_machine_bits_libs(f_path, gen_deps)
+        if is_bin and (machine is None or bits is None):
+            return write_sh_package(files[0], builder, any_extension=True)
+
+        deps = remove_libs_so_ending(libs)
+        deps = run_libs_fixup(ctx.lib_fixups, deps, partition)
         machines.append(machine)
         bitses.append(bits)
+        depses.append(deps)
 
     stem, package_name = file_stem_package_name(
         file, can_have_stem=True, any_extension=is_bin
@@ -222,7 +218,7 @@ def write_elfs_package(
             .name(package_name)
             .stem(stem)
             .owner()
-            .targets(files, machines, deps)
+            .targets(files, machines, depses)
             .multilibs(bitses)
             .check_elf(enable_check_elf)
             .no_strip()
@@ -239,7 +235,7 @@ def write_elfs_package(
         .stem(stem)
         .owner()
         .no_strip()
-        .targets(files, machines, deps)
+        .targets(files, machines, depses)
         .multilibs(bitses)
         .check_elf(enable_check_elf)
         .relative_install_path()
