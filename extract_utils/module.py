@@ -95,9 +95,9 @@ class ProprietaryFile:
 
         self.kind = kind
 
-    def fix_file_list(self, file_list: FileList):
+    def fix_file_list(self):
         if self.__fix_file_list is not None:
-            self.__fix_file_list(file_list)
+            self.__fix_file_list(self.file_list)
 
     def add_pre_post_makefile_generation_fn(
         self,
@@ -332,7 +332,7 @@ class GeneratedProprietaryFile(ProprietaryFile):
         ]
 
         self.file_list.add_from_lines(header_lines + file_srcs)
-        self.fix_file_list(self.file_list)
+        self.fix_file_list()
 
     def get_partitions(self) -> Set[str]:
         return {self.partition}
