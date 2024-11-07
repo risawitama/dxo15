@@ -77,6 +77,18 @@ class ProprietaryFile:
         file_list_path: str,
         vendor_rel_sub_path: str = 'proprietary',
         fix_file_list: Optional[fix_file_list_fn_type] = None,
+        pre_makefile_generation_fn: Optional[
+            pre_post_makefile_generation_fn_type
+        ] = None,
+        pre_makefile_generation_fns: Optional[
+            List[pre_post_makefile_generation_fn_type]
+        ] = None,
+        post_makefile_generation_fn: Optional[
+            pre_post_makefile_generation_fn_type
+        ] = None,
+        post_makefile_generation_fns: Optional[
+            List[pre_post_makefile_generation_fn_type]
+        ] = None,
         kind=ProprietaryFileType.BLOBS,
     ):
         self.file_list_path = file_list_path
@@ -86,12 +98,19 @@ class ProprietaryFile:
 
         self.__fix_file_list = fix_file_list
 
-        self.pre_makefile_generation_fns: List[
-            pre_post_makefile_generation_fn_type
-        ] = []
-        self.post_makefile_generation_fns: List[
-            pre_post_makefile_generation_fn_type
-        ] = []
+        if pre_makefile_generation_fns is None:
+            pre_makefile_generation_fns = []
+        self.pre_makefile_generation_fns = pre_makefile_generation_fns
+
+        if pre_makefile_generation_fn is not None:
+            self.add_pre_makefile_generation_fn(pre_makefile_generation_fn)
+
+        if post_makefile_generation_fns is None:
+            post_makefile_generation_fns = []
+        self.post_makefile_generation_fns = post_makefile_generation_fns
+
+        if post_makefile_generation_fn is not None:
+            self.add_post_makefile_generation_fn(post_makefile_generation_fn)
 
         self.kind = kind
 
@@ -99,13 +118,25 @@ class ProprietaryFile:
         if self.__fix_file_list is not None:
             self.__fix_file_list(self.file_list)
 
+    def add_pre_makefile_generation_fn(
+        self,
+        fn: pre_post_makefile_generation_fn_type,
+    ):
+        self.pre_makefile_generation_fns.append(fn)
+
+    def add_post_makefile_generation_fn(
+        self,
+        fn: pre_post_makefile_generation_fn_type,
+    ):
+        self.post_makefile_generation_fns.append(fn)
+
     def add_pre_post_makefile_generation_fn(
         self,
         pre_fn: pre_post_makefile_generation_fn_type,
         post_fn: pre_post_makefile_generation_fn_type,
     ) -> Self:
-        self.pre_makefile_generation_fns.append(pre_fn)
-        self.post_makefile_generation_fns.append(post_fn)
+        self.add_pre_makefile_generation_fn(pre_fn)
+        self.add_post_makefile_generation_fn(post_fn)
         return self
 
     def add_copy_files_guard(self, name: str, value: str, invert=False) -> Self:
