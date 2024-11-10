@@ -59,7 +59,7 @@ blob_fixups: blob_fixups_user_type = {
         .patch_file('blob-patches/TestConf.patch')
         .regex_replace('(LOG_.*_ENABLED)=1', '\\1=0')
         .add_line_if_missing('DEBUG=0'),
-    'vendor/etc/test.xml': blob_fixup()
+    ('vendor/etc/test.0.xml', 'vendor/etc/test.1.xml'): blob_fixup()
         .fix_xml(),
     'vendor/lib/test.so': blob_fixup()
         .patchelf_version('0_17_2')
