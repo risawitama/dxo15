@@ -54,11 +54,20 @@ BOARD_KERNEL_CMDLINE += loop.max_part=7
 BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/7824900.sdhci
 
 # Kernel (Compiler)
-TARGET_KERNEL_CLANG_VERSION := proton
-TARGET_KERNEL_CLANG_PATH := $(abspath .)/prebuilts/clang/kernel/linux-x86/clang-$(TARGET_KERNEL_CLANG_VERSION)
-TARGET_KERNEL_LLVM_BINUTILS := false
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(TARGET_KERNEL_CLANG_PATH)/bin/aarch64-linux-gnu-
-TARGET_KERNEL_CROSS_COMPILE_ARM32_PREFIX := $(TARGET_KERNEL_CLANG_PATH)/bin/arm-linux-gnueabi-
+KERNEL_COMPILER_NAME := proton
+KERNEL_COMPILER_PATH := $(abspath .)/prebuilts/clang/kernel/linux-x86/clang-$(KERNEL_COMPILER_NAME)
+
+# Check if the custom compiler exist
+ifneq ($(wildcard $(KERNEL_COMPILER_PATH)),)
+    TARGET_KERNEL_CLANG_VERSION := $(KERNEL_COMPILER_NAME)
+    TARGET_KERNEL_CLANG_PATH := $(KERNEL_COMPILER_PATH)
+    TARGET_KERNEL_LLVM_BINUTILS := false
+    TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(KERNEL_COMPILER_PATH)/bin/aarch64-linux-gnu-
+    TARGET_KERNEL_CROSS_COMPILE_ARM32_PREFIX := $(KERNEL_COMPILER_PATH)/bin/arm-linux-gnueabi-
+else
+    # Use default AOSP Clang if custom compiler is not available
+    TARGET_KERNEL_LLVM_BINUTILS := false
+endif
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
