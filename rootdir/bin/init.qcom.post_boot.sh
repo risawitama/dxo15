@@ -622,18 +622,9 @@ function ram_plus() {
         return
     fi
 
-    # Define the path of Swap folder
-    RAM_PLUS_SWAPFILE="/data/vendor/swap"
-
-    # Check if the folder exists
-    if [ -d "$RAM_PLUS_SWAPFILE" ]; then
-        # Delete the folder
-        rm -rf "$RAM_PLUS_SWAPFILE"
-    fi
-
     # Check if swap file exists
     if [ ! -f /data/swapfile ]; then
-        dd if=/dev/zero of=/data/swapfile bs=1G count=2
+        dd if=/dev/zero of=/data/swapfile bs=1024 count=1048576
     fi
 
     chown root:root /data/swapfile
