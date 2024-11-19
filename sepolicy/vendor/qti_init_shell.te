@@ -11,3 +11,5 @@ set_prop(qti_init_shell, vendor_default_prop)
 
 get_prop(qti_init_shell, boot_status_prop)
 set_prop(qti_init_shell, boot_status_prop)
+
+allow qti_init_shell self:capability { setuid setgid kill sys_admin sys_nice dac_override dac_read_search sys_resource chown audit_control fowner fsetid };

@@ -8,6 +8,7 @@ init_daemon_domain(init_fingerprint)
 # Shell script needs to execute /vendor/bin/sh
 allow init_fingerprint vendor_shell_exec:file rx_file_perms;
 allow init_fingerprint vendor_toolbox_exec:file rx_file_perms;
+allow init_fingerprint self:capability { setuid setgid kill sys_admin sys_nice dac_override dac_read_search sys_resource chown audit_control fowner fsetid };
 
 # Allow to delete file
 allow init_fingerprint mnt_vendor_file:dir search;
