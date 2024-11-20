@@ -45,6 +45,7 @@ BROTLI_EXT = '.new.dat.br'
 SPARSE_DATA_EXT = '.new.dat'
 TRANSFER_LIST_EXT = '.transfer.list'
 SPARSE_CHUNK_SUFFIX = '_sparsechunk'
+PAYLOAD_BIN_FILE_NAME = 'payload.bin'
 
 
 extract_fn_type = Callable[['ExtractCtx', str, str], str | None]
@@ -574,7 +575,7 @@ def extract_image(source: str, ctx: ExtractCtx, dump_dir: str):
     ]
 
     extract_file_names = [
-        'payload.bin',
+        PAYLOAD_BIN_FILE_NAME,
     ]
 
     if source_is_file:
@@ -588,10 +589,13 @@ def extract_image(source: str, ctx: ExtractCtx, dump_dir: str):
 
     run_extract_fns(ctx, dump_dir)
 
-    payload_bin_paths = find_payload_paths(extract_file_names, dump_dir)
+    payload_bin_paths = find_payload_paths(
+        [PAYLOAD_BIN_FILE_NAME],
+        dump_dir,
+    )
     if payload_bin_paths:
         assert len(payload_bin_paths) == 1
-        print_file_paths(payload_bin_paths, 'payload.bin')
+        print_file_paths(payload_bin_paths, PAYLOAD_BIN_FILE_NAME)
         extract_payload_bin(ctx, payload_bin_paths[0], dump_dir)
         remove_file_paths(payload_bin_paths)
 
