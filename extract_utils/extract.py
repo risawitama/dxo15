@@ -47,6 +47,7 @@ TRANSFER_LIST_EXT = '.transfer.list'
 SPARSE_CHUNK_SUFFIX = '_sparsechunk'
 PAYLOAD_BIN_FILE_NAME = 'payload.bin'
 SUPER_PARTITION_NAME = 'super'
+SUPER_IMG_NAME = 'super.img'
 
 
 extract_fn_type = Callable[['ExtractCtx', str, str], str | None]
@@ -140,12 +141,9 @@ def find_payload_paths(extract_partitions: List[str], input_path: str):
     return find_files(extract_partitions, input_path, b'CrAU')
 
 
-def find_super_img_path(input_path: str) -> Optional[str]:
-    super_img_path = path.join(input_path, 'super.img')
-    if path.isfile(super_img_path):
-        return super_img_path
-
-    return None
+def find_super_img_paths(extract_partitions: List[str], input_path: str):
+    magic = 0x616C4467.to_bytes(4, 'little')
+    return find_files(extract_partitions, input_path, magic, 4096)
 
 
 def find_brotli_paths(extract_partitions: List[str], input_path: str):
@@ -612,11 +610,12 @@ def extract_image(source: str, ctx: ExtractCtx, dump_dir: str):
         sparse_raw_paths = extract_sparse_raw_imgs(sparse_raw_paths, dump_dir)
         remove_file_paths(sparse_raw_paths)
 
-    super_img_path = find_super_img_path(dump_dir)
-    if super_img_path:
-        print_file_paths([super_img_path], 'super.img')
-        extract_super_img(ctx, super_img_path, dump_dir)
-        remove_file_paths([super_img_path])
+    super_img_paths = find_super_img_paths([SUPER_IMG_NAME], dump_dir)
+    if super_img_paths:
+        assert len(super_img_paths) == 1
+        print_file_paths(super_img_paths, SUPER_IMG_NAME)
+        extract_super_img(ctx, super_img_paths[0], dump_dir)
+        remove_file_paths(super_img_paths)
 
     brotli_paths = find_brotli_paths(ctx.extract_partitions, dump_dir)
     if brotli_paths:
