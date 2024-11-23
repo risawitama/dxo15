@@ -62,7 +62,7 @@ def blob_fixup_return_1(
         ]
     ).splitlines():
         if line.endswith(f' {symbol}'):
-            offset, _ = line.split(maxsplits=1)
+            offset, _ = line.split(maxsplit=1)
 
             with open(file_path, 'rb+') as f:
                 f.seek(int(offset, 16))
