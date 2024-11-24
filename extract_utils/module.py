@@ -378,9 +378,6 @@ class GeneratedProprietaryFile(ProprietaryFile):
         self.fix_file_list()
 
     def get_partitions(self) -> Set[str]:
-        if not self.file_list.all_files:
-            return set()
-
         return {self.partition}
 
 
@@ -452,10 +449,19 @@ class ExtractUtilsModule:
         if not skip_main_proprietary_file:
             self.add_proprietary_file('proprietary-files.txt')
 
-    def get_partitions(self, kind: ProprietaryFileType):
+    def get_partitions(
+        self,
+        kind: ProprietaryFileType,
+        section: Optional[str] = None,
+    ):
         partitions: List[str] = []
 
         for proprietary_file in self.proprietary_files:
+            if section is not None and isinstance(
+                proprietary_file, GeneratedProprietaryFile
+            ):
+                continue
+
             if proprietary_file.kind is not kind:
                 continue
 
@@ -478,8 +484,8 @@ class ExtractUtilsModule:
 
         return files
 
-    def get_extract_partitions(self):
-        return self.get_partitions(ProprietaryFileType.BLOBS)
+    def get_extract_partitions(self, section: Optional[str]):
+        return self.get_partitions(ProprietaryFileType.BLOBS, section)
 
     def get_firmware_partitions(self):
         return self.get_partitions(ProprietaryFileType.FIRMWARE)
@@ -698,11 +704,6 @@ class ExtractUtilsModule:
         section: Optional[str],
     ):
         for proprietary_file in self.proprietary_files:
-            if section is not None and isinstance(
-                proprietary_file, GeneratedProprietaryFile
-            ):
-                continue
-
             if regenerate and isinstance(
                 proprietary_file,
                 GeneratedProprietaryFile,

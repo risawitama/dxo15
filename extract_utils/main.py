@@ -145,7 +145,7 @@ class ExtractUtils:
                 extract_fns.update(module.extract_fns)
 
                 extract_partitions.update(
-                    module.get_extract_partitions(),
+                    module.get_extract_partitions(self.__args.section),
                 )
                 firmware_partitions.update(
                     module.get_firmware_partitions(),
