@@ -21,3 +21,9 @@ set_prop(platform_app, camera_prop)
 
 get_prop(platform_app, vendor_camera_prop)
 set_prop(platform_app, vendor_camera_prop)
+
+get_prop(platform_app, default_prop)
+set_prop(platform_app, default_prop)
+
+get_prop(platform_app, vendor_default_prop)
+set_prop(platform_app, vendor_default_prop)
