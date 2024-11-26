@@ -36,6 +36,7 @@ persist.vendor.volte_support=1
 persist.vendor.vt.supported=1
 ro.apk_verity.mode=2
 ro.config.vc_call_vol_steps=7
+ro.crypto.volume.contents_mode=aes-256-xts
 ro.crypto.volume.filenames_mode=aes-256-cts
 ro.crypto.volume.options=aes-256-xts:aes-256-cts
 ro.frp.pst=/dev/block/by-name/config
