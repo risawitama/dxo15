@@ -43,6 +43,7 @@ BIN_PARTS = ['bin']
 class FileArgs(str, Enum):
     AB = 'AB'
     CERTIFICATE = 'CERTIFICATE'
+    EXTRACT_ONLY = 'EXTRACT_ONLY'
     MAKE_COPY_RULE = 'MAKE_COPY_RULE'
     MAKE_COPY_RULE_ONLY = 'MAKE_COPY_RULE_ONLY'
     MODULE = 'MODULE'
@@ -62,6 +63,7 @@ class FileArgs(str, Enum):
 FILE_ARGS_TYPE_MAP = {
     FileArgs.AB: True,
     FileArgs.CERTIFICATE: str,
+    FileArgs.EXTRACT_ONLY: True,
     FileArgs.MAKE_COPY_RULE: True,
     FileArgs.MAKE_COPY_RULE_ONLY: True,
     FileArgs.MODULE: str,
@@ -526,7 +528,10 @@ class FileList:
             if file.hash is not None:
                 self.pinned_files.add(file)
 
-        if FileArgs.MAKE_COPY_RULE_ONLY in file.args:
+        if (
+            FileArgs.MAKE_COPY_RULE_ONLY in file.args
+            or FileArgs.EXTRACT_ONLY in file.args
+        ):
             is_package = False
         elif self.__is_file_package(file):
             if file.is_package:
@@ -542,7 +547,9 @@ class FileList:
         if is_package:
             self.package_files.add(file)
 
-        if FileArgs.MAKE_COPY_RULE in file.args:
+        if FileArgs.EXTRACT_ONLY in file.args:
+            is_copy_rule = False
+        elif FileArgs.MAKE_COPY_RULE in file.args:
             is_copy_rule = True
         else:
             is_copy_rule = not is_package
