@@ -539,11 +539,7 @@ class FileList:
                 )
             self.package_files.add(file)
 
-        if (
-            not is_package
-            or FileArgs.MAKE_COPY_RULE in file.args
-            or FileArgs.MAKE_COPY_RULE_ONLY in file.args
-        ):
+        if not is_package or FileArgs.MAKE_COPY_RULE in file.args:
             self.copy_files.add(file)
 
         self.all_files.add(file)
