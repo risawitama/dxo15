@@ -528,18 +528,26 @@ class FileList:
 
         if FileArgs.MAKE_COPY_RULE_ONLY in file.args:
             is_package = False
-        else:
-            is_package = self.__is_file_package(file)
-
-        if is_package or file.is_package:
-            if is_package and file.is_package:
+        elif self.__is_file_package(file):
+            if file.is_package:
                 color_print(
                     f'{file.dst}: already a package, no need for -',
                     color=Color.YELLOW,
                 )
+
+            is_package = True
+        else:
+            is_package = file.is_package
+
+        if is_package:
             self.package_files.add(file)
 
-        if not is_package or FileArgs.MAKE_COPY_RULE in file.args:
+        if FileArgs.MAKE_COPY_RULE in file.args:
+            is_copy_rule = True
+        else:
+            is_copy_rule = not is_package
+
+        if is_copy_rule:
             self.copy_files.add(file)
 
         self.all_files.add(file)
