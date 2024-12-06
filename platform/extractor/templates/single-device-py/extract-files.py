@@ -98,6 +98,7 @@ module = ExtractUtilsModule(
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
+    check_elf=True,
 )
 
 if __name__ == '__main__':

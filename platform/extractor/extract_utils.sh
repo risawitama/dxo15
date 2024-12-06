@@ -557,7 +557,7 @@ function write_blueprint_packages() {
 
         # Allow overriding module name
         STEM=
-        if [ "$TARGET_ENABLE_CHECKELF" != "false" ]; then
+        if [ "$TARGET_ENABLE_CHECKELF" == "true" ]; then
             DISABLE_CHECKELF=
             GENERATE_DEPS="true"
         else
@@ -786,10 +786,6 @@ function write_product_packages() {
 
     if [ "$COUNT" = "0" ]; then
         return 0
-    fi
-
-    if [ "$TARGET_ENABLE_CHECKELF" == "false" ]; then
-        colored_echo yellow "WARNING: TARGET_ENABLE_CHECKELF = false is deprecated and will be removed in Android 16."
     fi
 
     # Figure out what's 32-bit, what's 64-bit, and what's multilib
@@ -1415,7 +1411,7 @@ function parse_file_list() {
         if suffix_match_file ".apex" "$SRC_FILE" ||
             suffix_match_file ".apk" "$SRC_FILE" ||
             suffix_match_file ".jar" "$SRC_FILE" ||
-            [[ "$TARGET_ENABLE_CHECKELF" != "false" &&
+            [[ "$TARGET_ENABLE_CHECKELF" == "true" &&
                 ("$SRC_FILE" == *"lib/"*".so" ||
                 "$SRC_FILE" == *"lib64/"*".so" ||
                 "$SRC_FILE" == *"bin/"* ||
