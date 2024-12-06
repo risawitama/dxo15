@@ -21,7 +21,7 @@ ANDROID_ROOT="${MY_DIR}/../../.."
 
 export TARGET_ENABLE_CHECKELF=false
 
-HELPER="${ANDROID_ROOT}/tools/extract-utils/extract_utils.sh"
+HELPER="${ANDROID_ROOT}/device/xiaomi/onclite/platform/extractor/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
     echo "Unable to find helper script at ${HELPER}"
     exit 1
