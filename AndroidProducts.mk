@@ -11,6 +11,6 @@ COMMON_LUNCH_CHOICES := \
     lineage_onclite-user \
     lineage_onclite-userdebug \
     lineage_onclite-eng \
-    lineage_onclite-ap3a-user \
-    lineage_onclite-ap3a-userdebug \
-    lineage_onclite-ap3a-eng
+    lineage_onclite-ap4a-user \
+    lineage_onclite-ap4a-userdebug \
+    lineage_onclite-ap4a-eng
