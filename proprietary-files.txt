@@ -1453,6 +1453,12 @@ vendor/lib64/libOmxWmaDec.so|32e1b9c72d0b0a8b74978e1687b701e18030d68a
 vendor/lib64/libgpustats.so|a899ae72983277442cdacf8f43271986c91ce710
 vendor/lib64/libmm-color-convertor.so|d3539eb5a6a986f8ba81bac9cbf7b34872b12f1a
 
+# Media (GPS Dependency) - from LA.UM.10.6.2.c26-01500-89xx.0
+system_ext/lib/libmmosal.so|e23d6d1b2a035c08ffd7ac72d5241ebff37f0d14
+system_ext/lib64/libmmosal.so|e9fdb48163e92b089cea0c397723a8416436c272
+vendor/lib/libmmosal.so|e23d6d1b2a035c08ffd7ac72d5241ebff37f0d14
+vendor/lib64/libmmosal.so|e9fdb48163e92b089cea0c397723a8416436c272
+
 # Performance - from LA.UM.10.6.2.r1-02500-89xx.0
 system_ext/etc/perf/wlc_model.tflite|83cf4df067bc14c78f31943f32bcaf6f32419125
 system_ext/lib/libqti-perfd-client_system.so|79be2c728553c6c065a82441a9b4f7a32384f862
